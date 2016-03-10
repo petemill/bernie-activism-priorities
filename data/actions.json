@@ -1,0 +1,14 @@
+{
+  "actionsByState": {
+    "AK": {
+      "Summary": "hi"
+    }
+  },
+
+  priorityActions: [
+    {
+      "Summary": "do this"
+    }
+  ]
+
+}
