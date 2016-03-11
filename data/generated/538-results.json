@@ -1,0 +1,343 @@
+[{
+	"date": "Feb. 1",
+	"state": "Iowa",
+	"del_won_hill": "23",
+	"num_del_tot": "44",
+	"del_won_bern": "21"
+}, {
+	"date": "Feb. 9",
+	"state": "New Hampshire",
+	"del_won_hill": "9",
+	"num_del_tot": "24",
+	"del_won_bern": "15"
+}, {
+	"date": "Feb. 20",
+	"state": "Nevada",
+	"del_won_hill": "20",
+	"num_del_tot": "35",
+	"del_won_bern": "15"
+}, {
+	"date": "Feb. 27",
+	"state": "South Carolina",
+	"del_won_hill": "39",
+	"num_del_tot": "53",
+	"del_won_bern": "14"
+}, {
+	"date": "March 1",
+	"state": "Alabama",
+	"del_won_hill": "44",
+	"num_del_tot": "53",
+	"del_won_bern": "9"
+}, {
+	"date": "March 1",
+	"state": "American Samoa",
+	"del_won_hill": "4",
+	"num_del_tot": "6",
+	"del_won_bern": "2"
+}, {
+	"date": "March 1",
+	"state": "Arkansas",
+	"del_won_hill": "22",
+	"num_del_tot": "32",
+	"del_won_bern": "10"
+}, {
+	"date": "March 1",
+	"state": "Colorado",
+	"del_won_hill": "28",
+	"num_del_tot": "66",
+	"del_won_bern": "38"
+}, {
+	"date": "March 1",
+	"state": "Georgia",
+	"del_won_hill": "74",
+	"num_del_tot": "102",
+	"del_won_bern": "28"
+}, {
+	"date": "March 1",
+	"state": "Massachusetts",
+	"del_won_hill": "46",
+	"num_del_tot": "91",
+	"del_won_bern": "45"
+}, {
+	"date": "March 1",
+	"state": "Minnesota",
+	"del_won_hill": "31",
+	"num_del_tot": "77",
+	"del_won_bern": "46"
+}, {
+	"date": "March 1",
+	"state": "Oklahoma",
+	"del_won_hill": "17",
+	"num_del_tot": "38",
+	"del_won_bern": "21"
+}, {
+	"date": "March 1",
+	"state": "Tennessee",
+	"del_won_hill": "44",
+	"num_del_tot": "67",
+	"del_won_bern": "23"
+}, {
+	"date": "March 1",
+	"state": "Texas",
+	"del_won_hill": "148",
+	"num_del_tot": "222",
+	"del_won_bern": "74"
+}, {
+	"date": "March 1",
+	"state": "Vermont",
+	"del_won_hill": "0",
+	"num_del_tot": "16",
+	"del_won_bern": "16"
+}, {
+	"date": "March 1",
+	"state": "Virginia",
+	"del_won_hill": "62",
+	"num_del_tot": "95",
+	"del_won_bern": "33"
+}, {
+	"date": "March 5",
+	"state": "Kansas",
+	"del_won_hill": "10",
+	"num_del_tot": "33",
+	"del_won_bern": "23"
+}, {
+	"date": "March 5",
+	"state": "Louisiana",
+	"del_won_hill": "37",
+	"num_del_tot": "51",
+	"del_won_bern": "14"
+}, {
+	"date": "March 5",
+	"state": "Nebraska",
+	"del_won_hill": "10",
+	"num_del_tot": "25",
+	"del_won_bern": "15"
+}, {
+	"date": "March 6",
+	"state": "Maine",
+	"del_won_hill": "9",
+	"num_del_tot": "25",
+	"del_won_bern": "16"
+}, {
+	"date": "March 8",
+	"state": "Michigan",
+	"del_won_hill": "61",
+	"num_del_tot": "130",
+	"del_won_bern": "69"
+}, {
+	"date": "March 8",
+	"state": "Mississippi",
+	"del_won_hill": "32",
+	"num_del_tot": "36",
+	"del_won_bern": "4"
+}, {
+	"date": "March 12",
+	"state": "Northern Marianas",
+	"del_won_hill": null,
+	"num_del_tot": "6",
+	"del_won_bern": null
+}, {
+	"date": "March 15",
+	"state": "Florida",
+	"del_won_hill": null,
+	"num_del_tot": "214",
+	"del_won_bern": null
+}, {
+	"date": "March 15",
+	"state": "Illinois",
+	"del_won_hill": null,
+	"num_del_tot": "156",
+	"del_won_bern": null
+}, {
+	"date": "March 15",
+	"state": "Missouri",
+	"del_won_hill": null,
+	"num_del_tot": "71",
+	"del_won_bern": null
+}, {
+	"date": "March 15",
+	"state": "North Carolina",
+	"del_won_hill": null,
+	"num_del_tot": "107",
+	"del_won_bern": null
+}, {
+	"date": "March 15",
+	"state": "Ohio",
+	"del_won_hill": null,
+	"num_del_tot": "143",
+	"del_won_bern": null
+}, {
+	"date": "March 22",
+	"state": "Arizona",
+	"del_won_hill": null,
+	"num_del_tot": "75",
+	"del_won_bern": null
+}, {
+	"date": "March 22",
+	"state": "Idaho",
+	"del_won_hill": null,
+	"num_del_tot": "23",
+	"del_won_bern": null
+}, {
+	"date": "March 22",
+	"state": "Utah",
+	"del_won_hill": null,
+	"num_del_tot": "33",
+	"del_won_bern": null
+}, {
+	"date": "March 26",
+	"state": "Alaska",
+	"del_won_hill": null,
+	"num_del_tot": "16",
+	"del_won_bern": null
+}, {
+	"date": "March 26",
+	"state": "Hawaii",
+	"del_won_hill": null,
+	"num_del_tot": "25",
+	"del_won_bern": null
+}, {
+	"date": "March 26",
+	"state": "Washington",
+	"del_won_hill": null,
+	"num_del_tot": "101",
+	"del_won_bern": null
+}, {
+	"date": "April 5",
+	"state": "Wisconsin",
+	"del_won_hill": null,
+	"num_del_tot": "86",
+	"del_won_bern": null
+}, {
+	"date": "April 9",
+	"state": "Wyoming",
+	"del_won_hill": null,
+	"num_del_tot": "14",
+	"del_won_bern": null
+}, {
+	"date": "April 19",
+	"state": "New York",
+	"del_won_hill": null,
+	"num_del_tot": "247",
+	"del_won_bern": null
+}, {
+	"date": "April 26",
+	"state": "Connecticut",
+	"del_won_hill": null,
+	"num_del_tot": "55",
+	"del_won_bern": null
+}, {
+	"date": "April 26",
+	"state": "Delaware",
+	"del_won_hill": null,
+	"num_del_tot": "21",
+	"del_won_bern": null
+}, {
+	"date": "April 26",
+	"state": "Maryland",
+	"del_won_hill": null,
+	"num_del_tot": "95",
+	"del_won_bern": null
+}, {
+	"date": "April 26",
+	"state": "Pennsylvania",
+	"del_won_hill": null,
+	"num_del_tot": "189",
+	"del_won_bern": null
+}, {
+	"date": "April 26",
+	"state": "Rhode Island",
+	"del_won_hill": null,
+	"num_del_tot": "24",
+	"del_won_bern": null
+}, {
+	"date": "May 3",
+	"state": "Indiana",
+	"del_won_hill": null,
+	"num_del_tot": "83",
+	"del_won_bern": null
+}, {
+	"date": "May 7",
+	"state": "Guam",
+	"del_won_hill": null,
+	"num_del_tot": "7",
+	"del_won_bern": null
+}, {
+	"date": "May 10",
+	"state": "West Virginia",
+	"del_won_hill": null,
+	"num_del_tot": "29",
+	"del_won_bern": null
+}, {
+	"date": "May 14",
+	"state": "Democrats Abroad",
+	"del_won_hill": null,
+	"num_del_tot": "13",
+	"del_won_bern": null
+}, {
+	"date": "May 17",
+	"state": "Kentucky",
+	"del_won_hill": null,
+	"num_del_tot": "55",
+	"del_won_bern": null
+}, {
+	"date": "May 17",
+	"state": "Oregon",
+	"del_won_hill": null,
+	"num_del_tot": "61",
+	"del_won_bern": null
+}, {
+	"date": "June 4",
+	"state": "Virgin Islands",
+	"del_won_hill": null,
+	"num_del_tot": "7",
+	"del_won_bern": null
+}, {
+	"date": "June 5",
+	"state": "Puerto Rico",
+	"del_won_hill": null,
+	"num_del_tot": "60",
+	"del_won_bern": null
+}, {
+	"date": "June 7",
+	"state": "California",
+	"del_won_hill": null,
+	"num_del_tot": "475",
+	"del_won_bern": null
+}, {
+	"date": "June 7",
+	"state": "Montana",
+	"del_won_hill": null,
+	"num_del_tot": "21",
+	"del_won_bern": null
+}, {
+	"date": "June 7",
+	"state": "New Jersey",
+	"del_won_hill": null,
+	"num_del_tot": "126",
+	"del_won_bern": null
+}, {
+	"date": "June 7",
+	"state": "New Mexico",
+	"del_won_hill": null,
+	"num_del_tot": "34",
+	"del_won_bern": null
+}, {
+	"date": "June 7",
+	"state": "South Dakota",
+	"del_won_hill": null,
+	"num_del_tot": "20",
+	"del_won_bern": null
+}, {
+	"date": "June 7",
+	"state": "North Dakota",
+	"del_won_hill": null,
+	"num_del_tot": "18",
+	"del_won_bern": null
+}, {
+	"date": "June 14",
+	"state": "District Of Columbia",
+	"del_won_hill": null,
+	"num_del_tot": "20",
+	"del_won_bern": null
+}]
