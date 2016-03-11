@@ -3,6 +3,11 @@ import './ActivismMap.scss'
 import React from 'react';
 import Datamap from 'datamaps';
 import $ from 'jquery';
+import AddDays from './addDays';
+import GetMapPopupHtml from './MapPopup';
+
+const dateLimitPrimaryPast = new Date();
+const dateLimitPrimarySoon = AddDays(new Date(), 7);
 
 export default React.createClass({
 
@@ -44,8 +49,8 @@ export default React.createClass({
   shouldComponentUpdate(nextProps, nextState) {
 
     //only re-draw map if certain things change, since map is not virtualdom, so will actually re-paint every time update is called
-    console.log(nextState, this.state, nextProps, this.props);
-    return nextProps.chosenState != this.props.chosenState;
+    return false;
+		//nextProps.chosenState != this.props.chosenState;
   },
 
   componentWillUpdate() {
@@ -71,7 +76,7 @@ export default React.createClass({
 			//copy
 			const mapStateData = { ...this.props.stateData[state] };
 			//asign fillKey based on state's ...er... ...'state'.
-			mapStateData.fillKey = this.props.chosenState === state ? 'chosen' : 'default';
+			mapStateData.fillKey = this.props.chosenState === state ? 'chosen' : mapStateData.PrimaryDate && mapStateData.PrimaryDate < dateLimitPrimaryPast ? 'primaryPassed' : mapStateData.PrimaryDate && mapStateData.PrimaryDate < dateLimitPrimarySoon ? 'primarySoon' : 'default';
 			console.log('fillkey', state, mapStateData.fillKey);
 			//add to map data map
 			mapData[state] = mapStateData;
@@ -81,7 +86,7 @@ export default React.createClass({
 
 	drawMap() {
 
-    console.debug('rendering map')
+    console.debug('rendering map');
     //build mapdata, including selected states for ...states...
 		const mapData = this.getMapDataFromState();
     //create map with config
@@ -96,7 +101,9 @@ export default React.createClass({
       },
       fills: {
         default: '#ABDDA4',
-        chosen: '#FF0000'
+        chosen: '#0000FF',
+				primaryPast: '#A6A4A4',
+				primarySoon: '#FF0000'
       },
       data: mapData,
       done: (datamap) => {
@@ -109,15 +116,12 @@ export default React.createClass({
 		}));
     //display labels
     map.labels();
-
 		if (this.props.arc) {
 			map.arc(this.props.arc, this.props.arcOptions);
 		}
-
 		if (this.props.bubbles) {
 			map.bubbles(this.props.bubbles, this.props.bubbleOptions);
 		}
-
 		if (this.props.graticule) {
 			map.graticule();
 		}
@@ -125,20 +129,7 @@ export default React.createClass({
 
   getMapPopup(geo) {
 
-		//get data for the hovered state
-		const data = this.props.stateData[geo.id];
-		//delegate info html
-		const htmlDelegatesWon = data.delegateTotal ?
-			`<div class="delegate-info">Delegates: <span class="delegate-count-bernie">${data.delegatesWon || 0}</span> / <span class="delegate-count-total">${data.delegateTotal}</span></div>`
-			: null;
-		//actions html
-		const htmlActions = data.ActionData ? getMapPopupActionData(data.ActionData) : null;
-		//compile all html
-		return `<div class="activism-map-popup">
-              <h3 class="state-name">${data.Name}</h3>
-							<div class="Primary Date">${data.PrimaryDate}</div>
-							${htmlDelegatesWon}
-            </div>`;
+		return GetMapPopupHtml(geo, this.props.stateData);
   },
 
 	getMapPopupActionData(actions) {

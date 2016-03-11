@@ -58,7 +58,13 @@ function BuildStateData(stateHash, actionsByState, primaryData) {
     const thisStateData = stateData[stateCode];
     //primary date
     console.log(stateCode, primary.date)
-    thisStateData.PrimaryDate = primary.date;
+    try {
+      thisStateData.PrimaryDate = new Date(primary.date + ', 2016 23:59:59');
+    }
+    catch (e) {
+      console.error('error parsing primary date', primary.date);
+      console.error(e);
+    }
     //delegate math
     if (primary.num_del_tot) {
       thisStateData.delegateTotal = primary.num_del_tot;
