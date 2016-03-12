@@ -24,7 +24,7 @@ fs.readFile('src/index.html', 'utf8', (err, markup) => {
     const $linkEl = $(linkEl);
     const href = $linkEl.attr('href');
     if (href && href[0] === '/') {
-      $linkEl.attr('href', '/build' + href);
+      $linkEl.attr('href', 'build' + href);
     }
   });
   $('script[src]').each(function(i, linkEl) {
@@ -33,7 +33,7 @@ fs.readFile('src/index.html', 'utf8', (err, markup) => {
     const src = $linkEl.attr('src');
     console.log(src);
     if (src && src[0] === '/') {
-      $linkEl.attr('src', '/build' + src);
+      $linkEl.attr('src', 'build' + src);
     }
   });
   fs.writeFile('index.html', $.html(), 'utf8', function (err) {
