@@ -7,9 +7,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import configureStore  from './store/configureStore';
-import { Router, browserHistory } from 'react-router';
-
-import routes from './routes';
+import ActivismPrioritiesApp from './containers/ActivismPrioritiesApp/ActivismPrioritiesApp';
 
 const store = configureStore();
 const rootElement = document.getElementById('app');
@@ -22,14 +20,14 @@ if (process.env.NODE_ENV !== 'production') {
   // If using routes
   ComponentEl = (
     <div>
-      <Router history={browserHistory} routes={routes} />
+      <ActivismPrioritiesApp />
       <DevTools />
     </div>
   );
 } else {
   ComponentEl = (
     <div>
-      <Router history={browserHistory} routes={routes} />
+      <ActivismPrioritiesApp />
     </div>
   );
 }
