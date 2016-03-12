@@ -33,7 +33,8 @@
     "build": "SET NODE_ENV=production& NODE_ENV=production& webpack -p --config ./config/webpack.config.prod.js --progress",
     "lint": "eslint config src/js/**/*.js",
     "jscs": "jscs src/js/",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "finesse": "NODE_ENV=production node ./node_modules/webpack/bin/webpack.js -p --config ./config/webpack.config.prod.js --progress"
   },
   "devDependencies": {
     "autoprefixer-loader": "3.2.0",
