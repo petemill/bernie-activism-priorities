@@ -1,7 +1,6 @@
 //import './ActivismAction.scss';
 
 import React, { Component, PropTypes } from 'react';
-import { mapValues } from 'lodash';
 
 
 export default class ActivismAction extends Component {
