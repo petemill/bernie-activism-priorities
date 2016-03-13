@@ -37,8 +37,8 @@ class ActivismPrioritiesApp extends Component {
       <div className="app-activsm-priorities">
         <h1>Activism for Bernie Sanders</h1>
         {priorityActionsComponents}
-        <ActivismMap stateData={stateData} chosenState={chosenState} chooseStateById={actions.selectState} />
-        {chosenStateComponents}
+	      {chosenStateComponents}
+        <ActivismMap stateData={stateData} chosenState={chosenState} chooseStateById={actions.selectState} />      
       </div>
     );
   }
