@@ -15,12 +15,7 @@ export default React.createClass({
 	propTypes: {
     chooseStateById: React.PropTypes.func.isRequired,
 		stateData: React.PropTypes.object.isRequired,
-		arc: React.PropTypes.array,
-		arcOptions: React.PropTypes.object,
-		bubbleOptions: React.PropTypes.object,
-		bubbles: React.PropTypes.array,
-		graticule: React.PropTypes.bool,
-		labels: React.PropTypes.bool
+		viewportMode: React.PropTypes.string.isRequired
 	},
 
 	componentDidMount() {
@@ -48,8 +43,8 @@ export default React.createClass({
   shouldComponentUpdate(nextProps, nextState) {
 
     //only re-draw map if certain things change, since map is not virtualdom, so will actually re-paint every time update is called
-    return false;
-		//nextProps.chosenState != this.props.chosenState;
+		console.log('evaluating should map')
+		return (this.props.viewportMode !== nextProps.viewportMode);
   },
 
   componentWillUpdate() {
@@ -94,7 +89,7 @@ export default React.createClass({
 
 	drawMap() {
 
-    console.debug('rendering map');
+    console.debug('rendering map', this.props);
     //build mapdata, including selected states for ...states...
 		const mapData = this.getMapDataFromState();
     //create map with config
@@ -127,16 +122,9 @@ export default React.createClass({
         }
 		}));
     //display labels
-    map.labels({labelColor: '#333', fontSize: 14, fontFamily: 'lato', lineWidth: 1});
-		if (this.props.arc) {
-			map.arc(this.props.arc, this.props.arcOptions);
-		}
-		if (this.props.bubbles) {
-			map.bubbles(this.props.bubbles, this.props.bubbleOptions);
-		}
-		if (this.props.graticule) {
-			map.graticule();
-		}
+		if (this.props.viewportMode !== 'small')
+    	map.labels({labelColor: '#333', fontSize: 14, fontFamily: 'lato', lineWidth: 1});
+
 	},
 
   getMapPopup(geo) {
@@ -144,15 +132,6 @@ export default React.createClass({
 		return GetMapPopupHtml(geo, this.props.stateData);
   },
 
-	getMapPopupActionData(actions) {
-
-		const summaryHtml = actionData.Summary ?
-			`<div class="action-summary">${actionData.Summary}</div>`
-			: null;
-		const actionsHtml = `<ul class="action-list">`;
-
-		return ``;
-	},
 
   handleResize() {
 
