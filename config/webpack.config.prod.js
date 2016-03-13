@@ -27,11 +27,12 @@ const plugins = [
     __DEV__: JSON.stringify(JSON.parse(process.env.DEBUG || 'false'))
   }),
   //OccurenceOrderPlugin: Order the modules and chunks by occurrence. This saves space, because often referenced modules and chunks get smaller ids.
-  new webpack.optimize.OccurenceOrderPlugin(),
+ // new webpack.optimize.OccurenceOrderPlugin(),
   //Deduplicates modules and adds runtime code.
-  new webpack.optimize.DedupePlugin(),
+ // new webpack.optimize.DedupePlugin(),
   //minifies and obfuscates js
   new webpack.optimize.UglifyJsPlugin({
+		sourcemap: false,
     compress: {
       warnings: false
     }
@@ -95,5 +96,5 @@ module.exports = {
     ]
   },
   plugins: plugins,
-  devtool: 'source-map'
+  devtool: 'eval'
 };
