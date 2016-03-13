@@ -4,6 +4,7 @@ import { bindActionCreators } from 'redux';
 import * as ActivismActions from '../../actions/ActivismActions';
 import { ActivismMap, ActivismActionList, StatesDropdown, StatesKey } from '../../components';
 import $ from 'jquery';
+const dateNames = require('date-names');
 
 class ActivismPrioritiesApp extends Component {
 
@@ -56,7 +57,7 @@ class ActivismPrioritiesApp extends Component {
       //primary date html
       let primaryDateComponents = null;
       if (chosenStateData.PrimaryDate) {
-        const monthName = chosenStateData.PrimaryDate.toLocaleString('en-us', {month: 'long'});
+        const monthName = dateNames.months[chosenStateData.PrimaryDate.getMonth()];
         const day = chosenStateData.PrimaryDate.getDate();
         primaryDateComponents = <div className="primary-date">{monthName} {day}</div>;
       }

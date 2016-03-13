@@ -1,3 +1,5 @@
+const dateNames = require('date-names');
+
 function GetMapPopupHtml(geo, stateData) {
 
   //get data for the hovered state
@@ -16,7 +18,7 @@ function GetMapPopupHtml(geo, stateData) {
   //primary date html
   let htmlPrimaryDateHtml = null;
   if (data.PrimaryDate) {
-    const monthName = data.PrimaryDate.toLocaleString('en-us', {month: 'long'});
+    const monthName = dateNames.months[data.PrimaryDate.getMonth()];
     const day = data.PrimaryDate.getDate();
     htmlPrimaryDateHtml = `<div class="primary-date">${monthName} ${day}</div>`;
   }
