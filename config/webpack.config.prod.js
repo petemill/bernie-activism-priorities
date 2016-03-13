@@ -96,5 +96,5 @@ module.exports = {
     ]
   },
   plugins: plugins,
-  devtool: 'eval'
+  devtool: null
 };
