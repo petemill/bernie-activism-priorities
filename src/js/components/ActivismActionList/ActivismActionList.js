@@ -19,7 +19,7 @@ export default class ActivismActionList extends Component {
 
     return this.props.actionItems.map((activismAction) =>
       (
-        <ActivismAction
+        <ActivismAction key={activismAction.Summary}
           summary={activismAction.Summary}
           links={activismAction.Links}
            />

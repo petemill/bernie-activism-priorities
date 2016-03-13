@@ -15,7 +15,7 @@ export default class ActivismAction extends Component {
 
     return this.props.links.map((actionLink) =>
       (
-        <a className="activism-action-link" href={actionLink.Url}>
+        <a key={actionLink.Title} className="activism-action-link" href={actionLink.Url}>
           {actionLink.Title}
         </a>
       )
