@@ -16,9 +16,11 @@ export default class StatesDropdown extends Component {
 
     //bootstrap dropdown html
     return (
-      <div className="dropdown-statelist dropdown">
-        {this.renderDropdownButton()}
-        {this.renderDropdownList()}
+      <div className="statelist">
+        <div className="dropdown-statelist dropdown">
+          {this.renderDropdownButton()}
+          {this.renderDropdownList()}
+        </div>
       </div>
     );
   }
