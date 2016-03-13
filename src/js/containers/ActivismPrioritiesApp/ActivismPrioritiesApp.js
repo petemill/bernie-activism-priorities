@@ -23,7 +23,7 @@ class ActivismPrioritiesApp extends Component {
           <ActivismActionList actionItems={chosenStateData.ActionData.Actions} />
         : null;
       chosenStateComponents =
-        <div class="chosen-state">
+        <div className="chosen-state">
           {activismComponents}
         </div>;
     }
