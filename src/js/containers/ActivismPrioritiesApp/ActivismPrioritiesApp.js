@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as ActivismActions from '../../actions/ActivismActions';
-import { ActivismMap, ActivismActionList, StatesDropdown } from '../../components';
+import { ActivismMap, ActivismActionList, StatesDropdown, StatesKey } from '../../components';
 import $ from 'jquery';
 
 class ActivismPrioritiesApp extends Component {
@@ -77,6 +77,7 @@ class ActivismPrioritiesApp extends Component {
       <div className="app-activsm-priorities">
         <h1>Activism for Bernie Sanders</h1>
         {priorityActionsComponents}
+        <StatesKey />
         <StatesDropdown statesData={stateData} chosenState={chosenState} chooseStateById={actions.selectState} />
 	      {chosenStateComponents}
         <ActivismMap stateData={stateData} chosenState={chosenState} chooseStateById={actions.selectState} viewportMode={this.props.generalOptions.MapViewportMode} />
