@@ -10,7 +10,7 @@
 .map-activism
 {
   position: relative;
-  @include minWidths(margin-top, 0px, $w600: -40px, $w1280: -80px);
+  @include minWidths(margin-top, 0px, $w600: -40px, $w1280: -30px);
 }
 
 .activism-map-popup
@@ -20,7 +20,7 @@
   border-radius: 1px;
   box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
   font-family: 'Lato', sans-serif;
-  
+
   h3
   {
     background: white;
@@ -42,7 +42,7 @@
   {
     padding: 10px;
     color: #666;
-    
+
     .delegate-count-bernie
     {
       font-weight: 800;
@@ -64,7 +64,7 @@
   {
     padding: 0 10px;
     font-weight: 600;
-    
+
     &.message-selectstate
     {
       color: #0076d7;

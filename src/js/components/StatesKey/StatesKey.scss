@@ -10,9 +10,11 @@
   .key-states-past
   {
     display: flex;
+    align-items: center;
     @media (max-width: 600px)
     {
       flex-direction: column;
+      align-items: flex-start;
     }
   }
 
