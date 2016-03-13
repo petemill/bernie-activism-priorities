@@ -20,7 +20,7 @@ class ActivismPrioritiesApp extends Component {
 
   handleWindowWidth() {
 
-    if ($(window).width() > 400) {
+    if ($(window).width() > 600) {
       this.props.actions.changeViewportMode('large');
     }
     else {
