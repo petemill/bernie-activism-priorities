@@ -114,7 +114,7 @@ export default React.createClass({
       fills: {
         default: '#0076d7',
         chosen: '#0000FF',
-				primaryPast: '#666666',
+				primaryPast: '#999',
 				primarySoon: '#F55B5B'
       },
       data: mapData,

@@ -1,4 +1,5 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700|Lato:400,700,900,700italic,900italic,400italic,300italic,300);
+
 
 body {
   background: #f1f1f1;
@@ -23,7 +24,7 @@ body {
   .activism-actions
   {
     text-align: center;
-    padding: 0 0 20px 0;
+    padding: 0;
     margin: 0 auto;
     -webkit-padding-start: 0px;
     list-style: none;
@@ -34,13 +35,21 @@ body {
     li
     {
       margin-bottom: 20px;
-      
+
       p
       {
-        font-weight: 800;
-        font-size: 16px;
+        font-weight: 600;
+        font-size: 17px;
         color: #444;
       }
+    }
+    
+    .activism-action-links
+    {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      -webkit-padding-start: inherit;
     }
   }
   
@@ -58,7 +67,7 @@ body {
   border-radius: 4px;
   letter-spacing: 2px;
   font-weight: 400;
-  margin: 10px 3px;
+  margin: 0px 3px 10px 3px;
   text-transform: uppercase;
   font-size: 13px;
   
@@ -80,6 +89,71 @@ h2
 
 }
 
+.dropdown-statelist 
+{
+  z-index: 2;
+  margin: 20px auto 10px auto;
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  width: 260px;
+  
+  button
+  {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    color: #444;
+    letter-spacing: 1px;
+    font-size: 26px;
+    text-transform: none;
+    
+    .caret 
+    {
+      margin-left: 2px;
+      border-width: 6px;
+    }
+  }
+  .dropdown-menu
+  {
+    max-height: 500px;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+    
+    .dropdown-item
+    {
+      font-family: 'Roboto Slab', serif;
+      font-weight: 700;
+      color: #444;
+      font-size: 20px;
+      padding: 5px 20px 5px 10px;
+      
+			&:before
+      {
+        content: '';
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 10px;
+      }
+      
+      &.primary-past:before
+      {
+        background: #999;
+      }
+      
+      &.primary-upcoming:before
+      {
+        background: #0076d7;;
+      }
+      
+      &.primary-soon:before
+      {
+        background: #ea504e;
+      }           
+    }
+  }
+}
 
 
 

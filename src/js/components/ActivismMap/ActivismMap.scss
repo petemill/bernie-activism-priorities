@@ -1,9 +1,16 @@
 
+@mixin minWidths($style, $base: '', $w600: '', $w800: '', $w950: '', $w1280: '')
+{
+  @if($base != ''){ #{$style}:$base; }
+  @if($w600 != ''){ @media screen and (min-width: 600px) { #{$style}:$w600;} }
+  @if($w800 != ''){ @media screen and (min-width: 800px) { #{$style}:$w800;} }
+  @if($w1280 != ''){ @media screen and (min-width: 1280px) { #{$style}:$w1280;} }
+}
 
 .map-activism
 {
   position: relative;
-  margin-top: -80px;
+  @include minWidths(margin-top, -20px, $w600: -40px, $w1280: -80px);
 }
 
 .activism-map-popup
