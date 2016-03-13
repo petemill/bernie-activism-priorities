@@ -10,7 +10,7 @@
 .map-activism
 {
   position: relative;
-  @include minWidths(margin-top, -20px, $w600: -40px, $w1280: -80px);
+  @include minWidths(margin-top, 0px, $w600: -40px, $w1280: -80px);
 }
 
 .activism-map-popup
@@ -63,6 +63,7 @@
   p
   {
     padding: 0 10px;
+    font-weight: 600;
     
     &.message-selectstate
     {

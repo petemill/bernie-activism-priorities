@@ -93,7 +93,7 @@ h2
 .dropdown-statelist 
 {
   z-index: 2;
-  margin: 20px auto 10px auto;
+  margin: 10px auto;
   display: inline-block;
   display: flex;
   justify-content: center;
@@ -155,7 +155,7 @@ h2
     }
   }
 }
-
+// Chosen State Styles //
 .chosen-state
 {
   text-align: center;
@@ -191,4 +191,63 @@ h2
   }
 }
 
+//Map Key Styles //
+
+.key-states
+{
+  display: flex;
+  justify-content: center;
+  
+  .key-states-soon
+  {
+    padding: 10px 20px;
+    color: #666;
+    
+    &:before
+    {
+      content: '';
+      width: 15px;
+      height: 14px;
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 4px;
+      background: #ea504e;
+      vertical-align: middle;
+    }
+  }
+  .key-states-upcoming
+  {
+    padding: 10px 20px;
+    color: #666;
+    
+    &:before
+    {
+      content: '';
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 4px;
+      background: #0076d7;
+      vertical-align: middle;
+    }
+  }
+  .key-states-past
+  {
+    padding: 10px 20px;
+    color: #666;
+    
+    &:before
+    {
+      content: '';
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 4px;
+      background: #999;
+      vertical-align: middle;
+    }
+  }
+}
 
