@@ -1,18 +1,45 @@
+
+
 .map-activism
 {
   position: relative;
-
+  margin-top: -80px;
 }
-
 
 .activism-map-popup
 {
-  background: white;
+  background: #f1f1f1;
+  border: 1px solid #ccc;
+  border-radius: 1px;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+  font-family: 'Lato', sans-serif;
+  
   h3
   {
-    background: cyan;
-    color: white;
+    background: white;
+    color: #0076d7;
+    padding: 10px;
     font-size: 22px;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
     width: 100%;
+    margin: 0;
+  }
+  .primary-date
+  {
+    padding: 10px 10px 0 10px;
+    font-weight: 800;
+    color: #333;
+  }
+  .delegate-info
+  {
+    padding: 10px 10px 15px;
+    color: #666;
+    
+    span
+    {
+      font-weight: 800;
+      color: #0076d7;
+    }
   }
 }

@@ -1,4 +1,87 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700);
+
 body {
   background: #f1f1f1;
-  padding-top: 30px;
+  letter-spacing: 0.5px;
 }
+
+
+.app-activsm-priorities
+{
+  padding: 20px;
+
+  h1
+  {
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    color: #0076d7;
+    letter-spacing: 1px;
+    margin: 10px 0 20px;
+  }
+  
+  .activism-actions
+  {
+    text-align: center;
+    padding: 0 0 20px 0;
+    margin: 0 auto;
+    -webkit-padding-start: 0px;
+    list-style: none;
+    font-size: 15px;
+    max-width: 800px;
+    border-bottom: 2px solid #ddd;
+    
+    li
+    {
+      margin-bottom: 20px;
+      
+      p
+      {
+        font-weight: 800;
+        font-size: 16px;
+        color: #444;
+      }
+    }
+  }
+  
+  .chosen-state .activism-actions
+  {
+    border-bottom: none;
+  }
+}
+
+.activism-action-link
+{
+  background: #ea504e;
+  padding: 9px 13px;
+  color: #FFFFFF;
+  border-radius: 4px;
+  letter-spacing: 2px;
+  font-weight: 400;
+  margin: 10px 3px;
+  text-transform: uppercase;
+  font-size: 13px;
+  
+  &:hover
+  {
+    background-color: #ea504e;
+    color: white;
+    text-decoration: none;
+  }
+}
+
+h2
+{
+  font-family: 'Roboto Slab', serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #0076d7;
+  text-align: center;
+
+}
+
+
+
+
+
+

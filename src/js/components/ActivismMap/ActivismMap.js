@@ -76,7 +76,7 @@ export default React.createClass({
 			//copy
 			const mapStateData = { ...this.props.stateData[state] };
 			//asign fillKey based on state's ...er... ...'state'.
-			mapStateData.fillKey = this.props.chosenState === state ? 'chosen' : mapStateData.PrimaryDate && mapStateData.PrimaryDate < dateLimitPrimaryPast ? 'primaryPassed' : mapStateData.PrimaryDate && mapStateData.PrimaryDate < dateLimitPrimarySoon ? 'primarySoon' : 'default';
+			mapStateData.fillKey = this.props.chosenState === state ? 'chosen' : mapStateData.PrimaryDate && mapStateData.PrimaryDate < dateLimitPrimaryPast ? 'primaryPast' : mapStateData.PrimaryDate && mapStateData.PrimaryDate < dateLimitPrimarySoon ? 'primarySoon' : 'default';
 			console.log('fillkey', state, mapStateData.fillKey);
 			//add to map data map
 			mapData[state] = mapStateData;
@@ -97,13 +97,17 @@ export default React.createClass({
       geographyConfig: {
         popupOnHover: true,
         highlightOnHover: true,
+        highlightFillColor: '#45d363',
+        highlightBorderColor: 'white',
+        highlightBorderWidth: 1,
+        highlightBorderOpacity: 1,
         popupTemplate: (geo, data) => this.getMapPopup(geo, data)
       },
       fills: {
-        default: '#ABDDA4',
+        default: '#0076d7',
         chosen: '#0000FF',
-				primaryPast: '#A6A4A4',
-				primarySoon: '#FF0000'
+				primaryPast: '#666666',
+				primarySoon: '#F55B5B'
       },
       data: mapData,
       done: (datamap) => {
@@ -115,7 +119,7 @@ export default React.createClass({
         }
 		}));
     //display labels
-    map.labels();
+    map.labels({labelColor: '#333', fontSize: 14, fontFamily: 'lato', lineWidth: 1});
 		if (this.props.arc) {
 			map.arc(this.props.arc, this.props.arcOptions);
 		}
