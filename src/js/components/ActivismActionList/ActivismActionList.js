@@ -1,7 +1,6 @@
 //import './ActivismActionList.scss';
 
 import React, { Component, PropTypes } from 'react';
-import { mapValues } from 'lodash';
 
 import ActivismAction from '../ActivismAction/ActivismAction';
 
