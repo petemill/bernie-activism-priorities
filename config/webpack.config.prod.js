@@ -31,12 +31,12 @@ const plugins = [
   //Deduplicates modules and adds runtime code.
  // new webpack.optimize.DedupePlugin(),
   //minifies and obfuscates js
-  new webpack.optimize.UglifyJsPlugin({
+/*  new webpack.optimize.UglifyJsPlugin({
 		sourcemap: false,
     compress: {
       warnings: false
     }
-  }),
+  }),*/
   // This plugin moves all the CSS into a separate stylesheet
   new ExtractTextPlugin('css/[name].css', { allChunks: true })
 ];
