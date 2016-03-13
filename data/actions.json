@@ -1,56 +1,5 @@
 {
-  "actionsByState": {
-    "AK": {
-      "Actions": [
-        {
-          "Summary": "Canvas",
-          "Links": [
-            {
-              "Title": "Facebank" ,
-              "Url": "http://www.berniefriendfinder.com/"
-            },
-            {
-              "Title": "Phonebank",
-              "Url": "https://go.berniesanders.com/page/content/phonebank?source=activismmap"
-            },
-            {
-              "Title": "Canvas",
-              "Url": "https://go.berniesanders.com/page/s/bernie-journey?source=activismmap"
-            },
-            {
-              "Title": "Go the distance",
-              "Url": "https://go.berniesanders.com/page/content/gtd/"
-            }
-          ]
-        }
-      ]
-    }
-  },
 
-  "standardActions": [
-    {
-      "id": "canvas",
-      "Summary": "Canvas",
-      "Links": [
-        {
-          "Title": "Facebank" ,
-          "Url": "http://www.berniefriendfinder.com/"
-        },
-        {
-          "Title": "Phonebank",
-          "Url": "https://go.berniesanders.com/page/content/phonebank?source=activismmap"
-        },
-        {
-          "Title": "Canvas",
-          "Url": "https://go.berniesanders.com/page/s/bernie-journey?source=activismmap"
-        },
-        {
-          "Title": "Go the distance",
-          "Url": "https://go.berniesanders.com/page/content/gtd/"
-        }
-      ]
-    }
-  ],
 
   "priorityActions": [
     {
@@ -67,10 +16,6 @@
         {
           "Title": "Canvas",
           "Url": "https://go.berniesanders.com/page/s/bernie-journey?source=activismmap"
-        },
-        {
-          "Title": "Go the distance",
-          "Url": "https://go.berniesanders.com/page/content/gtd/"
         }
       ]
     },
@@ -78,11 +23,76 @@
       "Summary": "Sign up for out-of-state canvassing",
       "Links": [
         {
-          "Title": "Go the distance",
-          "Url": "https://go.berniesanders.com/page/content/gtd/"
+          "Title": "Journey for Bernie",
+          "Url": "https://go.berniesanders.com/page/s/bernie-journey?source=activismmap"
+        }
+      ]
+    }
+  ],
+
+
+
+  "actionsByState": {
+
+  },
+
+
+  "defaultPrimarySoonActions": [
+    {
+      "Summary": "Canvas if you live there or can travel",
+      "Links": [
+        {
+          "Title": "Locate a local office",
+          "Url": "http://map.berniesanders.com/go-the-distance/?source=activismmap"
+        },
+        {
+          "Title": "Journey for Bernie",
+          "Url": "https://go.berniesanders.com/page/s/bernie-journey?source=activismmap"
+        }
+      ]
+    },
+    {
+      "Summary": "Contact voters by Phone or Facebook",
+      "Links": [
+        {
+          "Title": "Phonebank",
+          "Url": "https://go.berniesanders.com/page/content/phonebank?source=activismmap"
+        },
+        {
+          "Title": "Facebank" ,
+          "Url": "http://www.berniefriendfinder.com/"
+        }
+      ]
+    }
+  ],
+
+
+  "defaultPrimaryUpcomingActions": [
+    {
+      "Summary": "Canvas if you live there or can travel",
+      "Links": [
+        {
+          "Title": "Locate a local office",
+          "Url": "http://map.berniesanders.com/go-the-distance/?source=activismmap"
+        },
+        {
+          "Title": "Journey for Bernie",
+          "Url": "https://go.berniesanders.com/page/s/bernie-journey?source=activismmap"
+        }
+      ]
+    },
+    {
+      "Summary": "Contact voters by Phone or Facebook",
+      "Links": [
+        {
+          "Title": "Phonebank",
+          "Url": "https://go.berniesanders.com/page/content/phonebank?source=activismmap"
+        },
+        {
+          "Title": "Facebank" ,
+          "Url": "http://www.berniefriendfinder.com/"
         }
       ]
     }
   ]
-
 }

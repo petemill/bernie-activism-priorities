@@ -8,7 +8,7 @@ const dateLimitPrimarySoon = AddDays(new Date(), 7);
 
 const initialState = {
   priorityActions: actionsData.priorityActions,
-  stateData: BuildStateData(statesHash, actionsData.actionsByState, primaryData),
+  stateData: BuildStateData(statesHash, actionsData.actionsByState, primaryData, actionsData.defaultPrimarySoonActions, actionsData.defaultPrimaryUpcomingActions),
   dataLoaded: false,
   chosenState: null
 };
@@ -27,7 +27,7 @@ export default function (state = initialState, action) {
 }
 
 
-function BuildStateData(stateHash, actionsByState, primaryData) {
+function BuildStateData(stateHash, actionsByState, primaryData, defaultPrimarySoonActions, defaultPrimaryUpcomingActions) {
 
   //build state name <-> shortcode lookups
   const stateShortCodeLookup = new Map();
@@ -86,13 +86,32 @@ function BuildStateData(stateHash, actionsByState, primaryData) {
     }
   }
   //merge with actions
-  for (const stateCode of Object.keys(actionsByState)) {
-    //verify valid state code
-    if (!stateNameLookup.has(stateCode)) {
-      console.error('unknown state found in actions', stateCode);
-      continue;
+  //iterate through state data
+  for (const stateCode of Object.keys(stateData)) {
+    //see if we have action data for state
+    if (actionsByState[stateCode]) {
+      stateData[stateCode].ActionData = actionsByState[stateCode];
     }
-    stateData[stateCode].ActionData = actionsByState[stateCode];
+    //get some default actions if no existing actions
+    else {
+      let defaultActions;
+      switch (stateData[stateCode].PrimaryDateDistance) {
+        case 2: //upcoming
+          defaultActions = defaultPrimaryUpcomingActions;
+          break;
+        case 1: //soon
+          defaultActions = defaultPrimarySoonActions;
+          break;
+        case 0: //past
+        default: //no primary date data
+          break; //no default data
+      }
+      //check we have default actions
+      if (defaultActions) {
+        //give the state default actions
+        stateData[stateCode].ActionData = {Actions: defaultActions};
+      }
+    }
   }
   //done
   return stateData;
