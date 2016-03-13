@@ -47,7 +47,7 @@ export default class StatesDropdown extends Component {
     const itemClassNames = classNames('dropdown-item', `primary-${primaryDateDistanceClass}`, {'active': this.props.chosenState === stateCode});
     return (
       <li className={itemClassNames} onClick={() => {this.props.chooseStateById(stateCode)}}>
-        <span class="state-name">{stateData.Name}</span>
+        <span className="state-name">{stateData.Name}</span>
       </li>
     );
   }

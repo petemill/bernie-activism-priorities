@@ -25,14 +25,14 @@ export default class ActivismAction extends Component {
 
   renderSummary() {
 
-    return this.props.summary ? <p class="activism-action-summary">{this.props.summary}</p> : null;
+    return this.props.summary ? <p className="activism-action-summary">{this.props.summary}</p> : null;
   }
 
 
   render () {
 
     return (
-      <li class="activism-action">
+      <li className="activism-action">
         {this.renderSummary()}
         <ul className="activism-action-links">
           {this.renderLinks()}
