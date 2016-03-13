@@ -40,13 +40,34 @@
   }
   .delegate-info
   {
-    padding: 10px 10px 15px;
+    padding: 10px;
     color: #666;
     
-    span
+    .delegate-count-bernie
     {
       font-weight: 800;
       color: #0076d7;
+    }
+
+    .delegate-count-total
+    {
+      font-weight: 800;
+      color: #333;
+    }
+    .delegate-percentagewon
+    {
+      font-weight: 800;
+      color: #0076d7;
+    }
+  }
+  p
+  {
+    padding: 0 10px;
+    
+    &.message-selectstate
+    {
+      color: #0076d7;
+      font-size: 14px;
     }
   }
 }
