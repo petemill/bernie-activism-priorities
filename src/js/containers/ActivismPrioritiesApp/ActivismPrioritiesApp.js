@@ -24,7 +24,6 @@ class ActivismPrioritiesApp extends Component {
         : null;
       chosenStateComponents =
         <div class="chosen-state">
-          <h2>{chosenStateData.Name}</h2>
           {activismComponents}
         </div>;
     }
