@@ -3,11 +3,10 @@ import './ActivismMap.scss'
 import React from 'react';
 import Datamap from 'datamaps';
 import $ from 'jquery';
-import AddDays from './addDays';
+
 import GetMapPopupHtml from './MapPopup';
 
-const dateLimitPrimaryPast = new Date();
-const dateLimitPrimarySoon = AddDays(new Date(), 7);
+
 
 export default React.createClass({
 
@@ -76,8 +75,17 @@ export default React.createClass({
 			//copy
 			const mapStateData = { ...this.props.stateData[state] };
 			//asign fillKey based on state's ...er... ...'state'.
-			mapStateData.fillKey = this.props.chosenState === state ? 'chosen' : mapStateData.PrimaryDate && mapStateData.PrimaryDate < dateLimitPrimaryPast ? 'primaryPassed' : mapStateData.PrimaryDate && mapStateData.PrimaryDate < dateLimitPrimarySoon ? 'primarySoon' : 'default';
-			console.log('fillkey', state, mapStateData.fillKey);
+			mapStateData.fillKey =
+				this.props.chosenState === state ?
+					'chosen'
+				:
+					mapStateData.PrimaryDateDistance === 0 ?
+						'primaryPast'
+					:
+						mapStateData.PrimaryDateDistance === 1 ?
+							'primarySoon'
+						:
+							'default';
 			//add to map data map
 			mapData[state] = mapStateData;
 		}

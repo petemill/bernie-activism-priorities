@@ -1,7 +1,9 @@
+import AddDays from './addDays';
 const actionsData = require("../../../data/actions.json");
 const statesHash = require("../../../data/states_hash.json");
 const primaryData = require("../../../data/generated/538-results.json");
-console.log(primaryData.length);
+const dateLimitPrimaryPast = new Date();
+const dateLimitPrimarySoon = AddDays(new Date(), 7);
 
 
 const initialState = {
@@ -57,13 +59,23 @@ function BuildStateData(stateHash, actionsByState, primaryData) {
     //take data we want
     const thisStateData = stateData[stateCode];
     //primary date
-    console.log(stateCode, primary.date)
     try {
       thisStateData.PrimaryDate = new Date(primary.date + ', 2016 23:59:59');
     }
     catch (e) {
       console.error('error parsing primary date', primary.date);
       console.error(e);
+    }
+    //calculate if date is past, soon or upcoming
+    if (thisStateData.PrimaryDate) {
+        thisStateData.PrimaryDateDistance =
+          thisStateData.PrimaryDate < dateLimitPrimaryPast ?
+            0 //past
+          :
+            thisStateData.PrimaryDate < dateLimitPrimarySoon ?
+              1 //soon
+            :
+              2; //future
     }
     //delegate math
     if (primary.num_del_tot) {
