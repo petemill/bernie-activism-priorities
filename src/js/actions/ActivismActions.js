@@ -4,3 +4,10 @@ export function selectState(stateId) {
     stateId
   };
 }
+
+export function changeViewportMode(mode) {
+  return {
+    type: 'CHANGE_MAP_VIEWPORT_MODE',
+    mode
+  };
+}

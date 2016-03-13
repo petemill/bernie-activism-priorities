@@ -3,8 +3,29 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as ActivismActions from '../../actions/ActivismActions';
 import { ActivismMap, ActivismActionList, StatesDropdown } from '../../components';
+import $ from 'jquery';
 
 class ActivismPrioritiesApp extends Component {
+
+  componentDidMount() {
+
+    this.handleWindowWidth();
+    $(window).on('resize', () => {
+
+      //TODO: debounce
+      this.handleWindowWidth();
+    })
+  }
+
+  handleWindowWidth() {
+
+    if ($(window).width() > 400) {
+      this.props.actions.changeViewportMode('large');
+    }
+    else {
+      this.props.actions.changeViewportMode('small');
+    }
+  }
 
   render() {
 
@@ -38,7 +59,7 @@ class ActivismPrioritiesApp extends Component {
         {priorityActionsComponents}
         <StatesDropdown statesData={stateData} chosenState={chosenState} chooseStateById={actions.selectState} />
 	      {chosenStateComponents}
-        <ActivismMap stateData={stateData} chosenState={chosenState} chooseStateById={actions.selectState} />      
+        <ActivismMap stateData={stateData} chosenState={chosenState} chooseStateById={actions.selectState} viewportMode={this.props.generalOptions.MapViewportMode} />
       </div>
     );
   }
@@ -55,7 +76,8 @@ function mapStateToProps(state) {
 
   console.log('map app state', state);
   return {
-    activismData: state.activismData
+    activismData: state.activismData,
+    generalOptions: state.generalOptions
   };
 }
 
